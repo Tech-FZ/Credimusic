@@ -1,2 +1,5 @@
 temp/test.mp3
 preferences/musicdef.json
+dist/*
+build/*
+credimusic.spec

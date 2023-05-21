@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 import urllib.request
-from pydub.playback import play
 import core.musicmgr_json
 from random import randint
 import pygame
@@ -48,7 +47,7 @@ class CredimusicMain:
         with open('./temp/test.mp3', 'wb+') as output:
             output.write(mp3file.read())
 
-        self.appwindow["-MUSICTEXT-"].update(selectedMusic[1].replace("\\n", "\n"))
+        self.appwindow["-MUSICTEXT-"].update(selectedMusic[1].replace("\\n", "\n").encode("latin1", "ignore").decode("utf-8"))
 
         pygame.init() # Initialize all imported pygame modules
         pygame.mixer.music.load("./temp/test.mp3") # Load an audio file into memory

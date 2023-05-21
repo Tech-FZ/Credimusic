@@ -14,3 +14,8 @@ Create `musicdef.json` within the preferences folder. Then there's the following
     ]
 }
 `
+
+## Modules
+
+- PySimpleGUI
+- pygame
